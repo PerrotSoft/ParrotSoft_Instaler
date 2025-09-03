@@ -163,6 +163,11 @@ body::after{
         <div class="title">ParrotOS alfa 0.5 <div class="muted">Desktop</div></div>
         <div class="tooltip">Stable desktop build — full GUI, recommended for most users.</div>
       </div>
+      <div class="icon-card" data-version="alfa-1.0" data-type="POSK" tabindex="0" role="button" aria-pressed="false">
+        <img src="data/ico.png" alt="desktop" />
+        <div class="title">ParrotOS alfa 1 <div class="muted">Desktop</div></div>
+        <div class="tooltip">Stable desktop build — full GUI, recommended for most users.</div>
+      </div>
 
     <!-- INSTALL PANEL -->
     <div id="installOverlay" aria-hidden="true">
@@ -233,7 +238,7 @@ body::after{
     installTitle.textContent=`Installing ParrotOS ${v} (${t})`;
     selVersion.textContent=`ParrotOS ${v}`;
     selType.textContent=t;
-    selDesc.textContent=(v==='alfa-0.1'|| v==='alfa-0.5')?'Beta server build — testing features.':'Stable desktop build — recommended for most users.';
+    selDesc.textContent=(v==='alfa-0.1'|| v==='alfa-0.5')?'Beta server build — testing features.':(v==='alfa-1.0')?"this is a full pre-release Alpha 1.0 made functions fully made file system pfs 0.1 made system for launching binary records program and all the like":'Stable desktop build — recommended for most users.';
     bigTitle.textContent=`ParrotOS-${v}-${t}.iso`;
     installOverlay.classList.add('show');
     installOverlay.setAttribute('aria-hidden','false');
