@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SuperUI Extended Glass</title>
+<link rel="stylesheet" href="style.css">
+<style>/* Секция плюсов/минусов */
+
+/* Секция плюсов/минусов */
+.list-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+.list-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 10px;
+}
+.list-section li {
+  margin: 8px 0;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+</style>
+</head>
+    <body>
+<div class="window fullscreen">
+  <h1 style="position: absolute;left: 50%;transform: translate(-50%, -50%);">Welcome to ParrotOS</h1>
+  <img src="data/ico.png" style="position: absolute;left: 50%;transform: translate(-50%, 30%);" alt="ParrotOS Icon" style="width:100px;margin:20px 0;">
+    <button class="button" onclick="window.location.href='install os.html'">Download OS</button>
+  <div style="height: 90px;"></div>
+  
+  <div class="box2" style="width:100%;margin-top:20px;">
+    <h2 style="text-align:center;">+/-</h2>
+    <div class="list-section">
+      <ul>
+        <li>✅ Stable OS</li>
+        <li>✅ Lightweight</li>
+        <li>✅ Pre-installed tools</li>
+      </ul>
+      <ul>
+        <li>❌ Will not support FAT32 file system</li>
+        <li>❌ PFS file system is quite unstable</li>
+        <li>❌ Errors can occur with even the slightest change in one bit</li>
+        <li>❌ No possibility to delete files or folders</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+const startBtn = document.getElementById('startBtn');
+const progressBar = document.getElementById('progressBar');
+
+startBtn.addEventListener('click', () => {
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress += Math.floor(Math.random() * 8) + 2; // случайный прогресс
+    if(progress >= 100) progress = 100;
+    progressBar.style.width = progress + '%';
+    progressBar.textContent = progress + '%';
+    if(progress === 100) clearInterval(interval);
+  }, 300);
+});
+</script>
+    </body>
+</html>
