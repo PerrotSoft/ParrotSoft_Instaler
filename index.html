@@ -153,20 +153,10 @@ body::after{
   <div class="content">
     <!-- MAIN PAGE -->
     <div id="mainPage" aria-hidden="false">
-      <div class="icon-card" data-version="alfa-0.1" data-type="POSK" tabindex="0" role="button" aria-pressed="false">
+      <div class="icon-card" data-version="alfa-2.0" data-type="POSK" tabindex="0" role="button" aria-pressed="false">
         <img src="data/ico.png" alt="desktop" />
-        <div class="title">ParrotOS alfa 0.1 <div class="muted">Desktop</div></div>
-        <div class="tooltip">Stable desktop build — full GUI, recommended for most users.</div>
-      </div>
-      <div class="icon-card" data-version="alfa-0.5" data-type="POSK" tabindex="0" role="button" aria-pressed="false">
-        <img src="data/ico.png" alt="desktop" />
-        <div class="title">ParrotOS alfa 0.5 <div class="muted">Desktop</div></div>
-        <div class="tooltip">Stable desktop build — full GUI, recommended for most users.</div>
-      </div>
-      <div class="icon-card" data-version="alfa-1.0" data-type="POSK" tabindex="0" role="button" aria-pressed="false">
-        <img src="data/ico.png" alt="desktop" />
-        <div class="title">ParrotOS alfa 1 <div class="muted">Desktop</div></div>
-        <div class="tooltip">Stable desktop build — full GUI, recommended for most users.</div>
+        <div class="title">ParrotOS alfa 2 <div class="muted">Desktop</div></div>
+        <div class="tooltip">Stable Uefi desktop build — full GUI, recommended for most users.</div>
       </div>
 
     <!-- INSTALL PANEL -->
@@ -269,7 +259,7 @@ body::after{
   backBtn.addEventListener('click', hideInstall);
 
   downloadBtn.addEventListener('click', ()=>{
-    const filename=`ParrotOS-${current.version}-${current.type}.iso`;
+    const filename=`ParrotOS-${current.version}-${current.type}.img`;
     const url='data/'+filename;
     downloadBtn.disabled=true;
     progressBar.classList.add('active');
